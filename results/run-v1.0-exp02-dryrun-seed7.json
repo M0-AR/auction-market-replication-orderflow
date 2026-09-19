@@ -1,0 +1,8 @@
+{
+  "spec": "v1.0",
+  "exp": "exp02",
+  "mode": "dry-run",
+  "shutoff_ok": true,
+  "absorption_selfcheck": true,
+  "TODO": "add Tradovate MNQ tape + GEX feed for 30-trade replay"
+}

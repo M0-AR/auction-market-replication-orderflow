@@ -1,0 +1,138 @@
+{
+  "spec": "v1.0",
+  "exp": "exp07",
+  "seed": 7,
+  "provenance": "cache data/cache/nq_f_5m_60d.csv, n=950",
+  "design": {
+    "folds": 4,
+    "purge_bars": 2,
+    "embargo_bars": 2,
+    "fold_benchmark_b": "PF_net>1.0 AND expect_R>0 AND n>=3",
+    "wfa_rule": "PASS if >=3/4 folds PASS and 0 VETO (total_R<-8)",
+    "WFER": "N/A \u2014 frozen rules, no IS optimization (per controlled study: ratio redundant/miscalibrated; stitched OOS Sharpe/t primary)"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "n": 7,
+      "pf_net": 1.434,
+      "pf_gross": 1.126,
+      "expect_R": 0.072,
+      "win_rate": 0.429,
+      "maxDD_R": 4.0,
+      "total_R": 0.505,
+      "sortino": 0.0,
+      "calmar": 0.126,
+      "PASS": true,
+      "VETO": false
+    },
+    {
+      "fold": 1,
+      "n": 5,
+      "pf_net": Infinity,
+      "pf_gross": Infinity,
+      "expect_R": 1.48,
+      "win_rate": 1.0,
+      "maxDD_R": 0.0,
+      "total_R": 7.398,
+      "sortino": 0.0,
+      "calmar": 0.0,
+      "PASS": true,
+      "VETO": false
+    },
+    {
+      "fold": 2,
+      "n": 5,
+      "pf_net": 0.444,
+      "pf_gross": 0.377,
+      "expect_R": -0.498,
+      "win_rate": 0.2,
+      "maxDD_R": 3.0,
+      "total_R": -2.492,
+      "sortino": 0.0,
+      "calmar": -0.831,
+      "PASS": false,
+      "VETO": false
+    },
+    {
+      "fold": 3,
+      "n": 5,
+      "pf_net": 7.63,
+      "pf_gross": 5.96,
+      "expect_R": 0.992,
+      "win_rate": 0.8,
+      "maxDD_R": 1.0,
+      "total_R": 4.96,
+      "sortino": 0.0,
+      "calmar": 4.96,
+      "PASS": true,
+      "VETO": false
+    }
+  ],
+  "wfa": {
+    "passed_folds": 3,
+    "vetoes": 0,
+    "WFA_PASS": true
+  },
+  "stitched": {
+    "n": 22,
+    "pf_gross": 2.152,
+    "pf_net": 2.407,
+    "win_rate": 0.591,
+    "expect_R": 0.471,
+    "maxDD_R": 4.0,
+    "total_R": 10.371,
+    "total_net": 1724.61,
+    "sharpe_pertrade": 0.385,
+    "t": 1.806,
+    "NOTE": "per-trade Sharpe (no fake annualization); earlier sqrt(252*78) build gave 53.98 \u2014 withdrawn as units error"
+  },
+  "monte_carlo_shuffle2000": {
+    "P_profitable": 1.0,
+    "p5_totalR": 10.371,
+    "p50_totalR": 10.371,
+    "WARNING": "degenerate \u2014 shuffle-invariant totals (DaruFinance #1); do NOT rank on this",
+    "GO_needs": "P>=0.75 AND 5th pct Sharpe>0"
+  },
+  "stationary_bootstrap_B1000_blk3": {
+    "sharpe_95CI": [
+      -0.08,
+      1.078
+    ]
+  },
+  "cost_stress": {
+    "base": {
+      "n": 22,
+      "pf_gross": 2.152,
+      "pf_net": 2.407,
+      "win_rate": 0.591,
+      "expect_R": 0.471,
+      "maxDD_R": 4.0,
+      "total_R": 10.371,
+      "total_net": 1724.61
+    },
+    "x1.5": {
+      "n": 22,
+      "pf_gross": 2.152,
+      "pf_net": 2.39,
+      "win_rate": 0.591,
+      "expect_R": 0.471,
+      "maxDD_R": 4.0,
+      "total_R": 10.371,
+      "total_net": 1711.41
+    },
+    "x2": {
+      "n": 22,
+      "pf_gross": 2.152,
+      "pf_net": 2.346,
+      "win_rate": 0.591,
+      "expect_R": 0.471,
+      "maxDD_R": 4.0,
+      "total_R": 10.371,
+      "total_net": 1676.21
+    }
+  },
+  "location_hits": 78,
+  "participation_blocked": 40,
+  "LIMITS": "public 5m bars only: NO bid/ask tape, NO GEX feed; absorption unproven; frozen-rule WFA (no tuning) \u2014 veto/gates pre-committed above"
+}

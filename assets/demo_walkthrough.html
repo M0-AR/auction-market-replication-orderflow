@@ -1,0 +1,15 @@
+<html><head><meta charset="utf-8"><title>creamer-verification demo</title></head>
+<body style="font-family:sans-serif;max-width:900px;margin:auto">
+<h1>creamer-verification — 60-second demo</h1>
+<p><b>REJECT as edge / HOLD as program.</b> Frozen SPEC v1.0, seed 7, public 5m NQ RTH n=950.</p>
+<ol>
+<li><b>0:00 Pipeline</b> — <code>python3 src/exp00_synthetic.py</code> → loc/absorp/fail2 True, n=1.</li>
+<li><b>0:15 Public bars</b> — <code>python3 src/exp04_public_intraday.py</code> → 78 hits → 40 blocked → n=22, PF 2.39.</li>
+<li><b>0:30 Deflate</b> — <code>python3 src/exp05_benchmarks.py</code> → DSR 0.62 FAIL, RC 0.80 FAIL, buy-hold wins.</li>
+<li><b>0:45 WFA+MC</b> — <code>python3 src/exp07_wfa_mc.py</code> → 3/4 PASS but t 1.81, CI includes 0, MC degenerate.</li>
+<li><b>1:00 Paper</b> — <code>python3 src/exp06_paper.py</code> → docs/PAPER_RESULTS.md. Tape + GEX remain TODO.</li>
+</ol>
+<img src="equity_R.png" width="100%"><img src="benchmark_sharpe.png" width="100%">
+<img src="wfa_folds.png" width="100%"><img src="cost_stress.png" width="100%">
+<p>HYPOTHETICAL (CFTC 4.41) — not financial advice.</p>
+</body></html>

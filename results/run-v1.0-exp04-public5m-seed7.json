@@ -1,0 +1,38 @@
+{
+  "spec": "v1.0",
+  "exp": "exp04",
+  "provenance": "yfinance NQ=F 5m 60d, n=950, RTH 09:30-11:00 ET enforced",
+  "location_hits": 78,
+  "participation_blocked": 40,
+  "LIMITS": "public bars: NO bid/ask tape, NO GEX feed; absorption unproven; tape TODO",
+  "base": {
+    "n": 22,
+    "pf_gross": 2.152,
+    "pf_net": 2.407,
+    "win_rate": 0.591,
+    "expect_R": 0.471,
+    "maxDD_R": 4.0,
+    "total_R": 10.371,
+    "total_net": 1724.61
+  },
+  "x1.5": {
+    "n": 22,
+    "pf_gross": 2.152,
+    "pf_net": 2.39,
+    "win_rate": 0.591,
+    "expect_R": 0.471,
+    "maxDD_R": 4.0,
+    "total_R": 10.371,
+    "total_net": 1711.41
+  },
+  "x2": {
+    "n": 22,
+    "pf_gross": 2.152,
+    "pf_net": 2.346,
+    "win_rate": 0.591,
+    "expect_R": 0.471,
+    "maxDD_R": 4.0,
+    "total_R": 10.371,
+    "total_net": 1676.21
+  }
+}

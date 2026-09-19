@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "creamer-verification: frozen-spec replication scaffold for Chris Creamer Robbins Micro Day-Trading strategy"
+version: 1.0.0
+date-released: 2026-09-19
+authors:
+  - family-names: "contributors"
+    given-names: "creamer-verification"
+license: MIT
+repository-code: "https://example.invalid/creamer-verification"
+abstract: "Point-in-time, contract-correct, seed-fixed scaffold testing the transcript-frozen 4-step (GEX regime, VA+fib 705/788/886 discount, footprint absorption+flip, 1.5-2R with 20k/90-min/2-loss filters). Synthetic + proxy only; tape+GEX TODO."
+keywords: [auction-market-theory, volume-profile, gamma-exposure, footprint, futures, reproducibility]
